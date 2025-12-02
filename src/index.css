@@ -28,6 +28,12 @@
     body {
         background-color: var(--color-base);
         color: var(--color-primary);
-        transition: background-color 0.3s, color 0.3s;
     }
+}
+
+.jetbrains-mono-300 {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
