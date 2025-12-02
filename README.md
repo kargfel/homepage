@@ -1,43 +1,29 @@
-## React + Vite + TailwindCSS template
+# 👨‍💻 Portfolio Website
 
-Create your own project based on this template by running:
+> A minimalist, responsive personal portfolio website built with React and Tailwind CSS.
 
-```bash
-npx degit quavedev/react-vite-tailwindcss-template your-project
-```
+## 📖 About
 
-## Install
+This is my personal corner of the internet. I am an **Informatics Student at DHBW Stuttgart** with a strong interest in Computer Science and **Cybersecurity**. 
 
-```bash
-npm install
-```
+This website serves as a hub to showcase my projects, skills, and contact information. It is designed to be accessible, fast, and easy on the eyes (thanks to Dark Mode).
 
-> You can make sure you are running Node.js 22 with `nvm`. Run `nvm use` to set the Node.js 22 in this project.
+## ✨ Key Features
 
-## Develop
+* **🌗 Dark/Light Mode:** * Automatically detects system preference (`prefers-color-scheme`).
+    * Persists user choice via `localStorage`.
+    * Smooth visual toggle with custom icons.
+* **📱 Fully Responsive:** * Mobile-first design using Tailwind CSS breakpoints.
+    * Adapts layout from single-column (mobile) to multi-column (desktop).
+* **🎨 Dynamic Project Cards:** * Supports standard image thumbnails.
+    * **Live Component Preview:** Capable of rendering live React components (animations/previews) inside project cards instead of static images (e.g., `ShitbingoPreview`).
+* **⚡ Tech Stack:** React, Tailwind CSS.
 
-```bash
-npm run dev
-```
+## 🛠️ Built With
 
-## Build
+* [React](https://reactjs.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Vite](https://vitejs.dev/) / [Next.js](https://nextjs.org/)
 
-```bash
-npm build
-```
-
-Preview:
-
-```bash
-npm run preview
-```
-
-## Deploy on Quave Cloud
-
-Create your account at [quave.cloud](https://quave.cloud).
-
-Connect to your GitHub, create your app and done!
-
-Push to Deploy.
-
-Or use the preconfigured [action](./.github/workflows/deploy.yaml) to deploy your app. Uncomment all the lines and add your Quave Cloud User Token (QUAVE_CLOUD_USER_TOKEN) to your secrets on GitHub and replace `env` placeholder value with your app env name (check it on app.quave.cloud > Your app env > Settings).
+## 👤 Autor
+GitHub: [@kargfel](https://github.com/kargfel)
