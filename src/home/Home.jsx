@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ProjectsSection from "../projectAnimations/ProjectsSection";
+import { Footer } from "./Footer";
 
 export const Home = () => {
   // 1. Initialize state
@@ -150,6 +151,19 @@ export const Home = () => {
         <h2 className="text-2xl mb-4 md:text-left">Projects</h2>
         <ProjectsSection />
       </section>
+
+      <section className="mt-10 ContactSection">
+        <div>
+          <h2 className="text-2xl mb-4">Contact</h2>
+          <p>
+            Feel free to reach out to me via <a href="mailto:felix.karg@gmx.net" className="underline">email</a> or connect with me on <a href="https://www.linkedin.com/in/felix-karg-48b525290" target="_blank" rel="noopener noreferrer" className="underline">LinkedIn</a>.
+          </p>
+        </div>
+      </section>
+      <Footer />
     </div>
+
+
+    
   );
 };
