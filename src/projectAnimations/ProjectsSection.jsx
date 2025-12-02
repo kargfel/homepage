@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "Shitbingo",
     description: "A humorous, accessible web app for meetings where too much is said – and too little gets done.",
-    tags: ["React", "MongoDB", "Tailwind", "Python"],
+    tags: ["ReactJS", "MongoDB", "TailwindCSS", "Python"],
     link: "https://shitbingo.de", // Optional
     // Hier nutzen wir die Custom Component statt eines Bildes
     component: <ShitbingoPreview />, 
@@ -22,6 +22,14 @@ const projects = [
   },
   {
     id: 3,
+    title: "Weather App",
+    description: "Minimalistische Wetter-Vorhersage basierend auf der aktuellen Geolocation.",
+    tags: ["API Integration", "CSS Grid", "PWA"],
+    image: "https://images.unsplash.com/photo-1592210454132-328629affb12?auto=format&fit=crop&q=80&w=800",
+    theme: "bg-blue-900"
+  },
+  {
+    id: 4,
     title: "Weather App",
     description: "Minimalistische Wetter-Vorhersage basierend auf der aktuellen Geolocation.",
     tags: ["API Integration", "CSS Grid", "PWA"],
