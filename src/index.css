@@ -1,1 +1,39 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+@theme {
+    /* This maps your CSS vars to Tailwind utility classes like bg-base, text-primary */
+    --color-base: var(--color-base);
+    --color-surface: var(--color-surface);
+    --color-primary: var(--color-primary);
+    --color-secondary: var(--color-secondary);
+}
+
+/* 1. DEFAULT (LIGHT Mode) */
+:root {
+    --color-base: #F3E2D4;
+    --color-surface: #C5B0CD;
+    --color-primary: #17313E;
+    --color-secondary: #415E72;
+}
+
+/* 2. DARK MODE OVERRIDES */
+.dark {
+    --color-base: #17313E;
+    --color-surface: #415E72;
+    --color-primary: #F3E2D4;
+    --color-secondary: #C5B0CD;
+}
+
+@layer base {
+    body {
+        background-color: var(--color-base);
+        color: var(--color-primary);
+    }
+}
+
+.jetbrains-mono-300 {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
