@@ -37,7 +37,7 @@ export const Home = () => {
       <section className="mt-10 HeroSection">
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-4 justify-center mb-4">
           <div className="w-48 h-48 rounded-full object-cover md:h-auto md:w-auto overflow-hidden">
-            <img src="/me.png" alt="Thats me" width={600} />
+            <img src="/me.png" alt="Thats me" width={600} loading="lazy" decoding="async"/>
           </div>
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-left">Felix Karg</h1>
