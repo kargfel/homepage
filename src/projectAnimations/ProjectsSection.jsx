@@ -1,4 +1,5 @@
 import ShitbingoPreview from './shitBingoPreview'; // Pfad anpassen
+import PasserbyCountPreview from "./PasserbyCountPreview.jsx";
 
 // Beispiel-Daten für andere Projekte
 const projects = [
@@ -14,10 +15,11 @@ const projects = [
   },
   {
     id: 2,
-    title: "E-Commerce Dashboard",
-    description: "Modernes Dashboard zur Verwaltung von Produkten und Bestellungen mit Echtzeit-Daten.",
-    tags: ["Next.js", "Tailwind", "Recharts"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    title: "Passersby Würzburg",
+    description: "Exploratory Data Analysis: Pedestrian Footfall in Würzburg.",
+    tags: ["R", "LaTeX", "Recharts"],
+    link: "https://shitbingo.de",
+    component: <PasserbyCountPreview />,
     theme: "bg-neutral-900"
   },
   {
