@@ -1,4 +1,4 @@
-FROM node:22.20.0 as builder
+FROM node:22.20.0 AS builder
 
 RUN mkdir -p /workspace/app && chown node:node /workspace -R
 
@@ -11,14 +11,15 @@ COPY --chown=node:node . /workspace/app
 
 RUN npm install && npm run build
 
-FROM node:22.20.0
+# Production stage
+FROM nginx:stable-alpine
 
-RUN npm i -g serve
+# Copy built assets from builder stage
+COPY --from=builder /workspace/app/dist /usr/share/nginx/html
 
-COPY --from=builder --chown=node:node /workspace/app/dist /app
+# Copy custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-USER node:node
+EXPOSE 80
 
-WORKDIR /app
-
-ENTRYPOINT ["serve", "-p", "3000",  "-s", "/app"]
+CMD ["nginx", "-g", "daemon off;"]
