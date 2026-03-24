@@ -19,28 +19,18 @@ const projects = [
     title: "Passersby Würzburg",
     description: "Exploratory Data Analysis: Pedestrian Footfall in Würzburg.",
     tags: ["R", "LaTeX"],
-    link: "https://shitbingo.de",
+    link: "https://github.com/kargfel/datascience-passeraby",
     component: <PasserbyCountPreview />,
     theme: "bg-neutral-900",
   },
   {
     id: 3,
-    title: "Weather App",
+    title: "NetWatch",
     description:
-      "Minimalistische Wetter-Vorhersage basierend auf der aktuellen Geolocation.",
-    tags: ["API Integration", "CSS Grid", "PWA"],
-    image:
-      "https://images.unsplash.com/photo-1592210454132-328629affb12?auto=format&fit=crop&q=80&w=800",
-    theme: "bg-blue-900",
-  },
-  {
-    id: 4,
-    title: "Weather App",
-    description:
-      "Minimalistische Wetter-Vorhersage basierend auf der aktuellen Geolocation.",
-    tags: ["API Integration", "CSS Grid", "PWA"],
-    image:
-      "https://images.unsplash.com/photo-1592210454132-328629affb12?auto=format&fit=crop&q=80&w=800",
+      "Contributing to NetWatch, a security project for making the internet a safer place.",
+    tags: ["Python", "Security", "Open Source"],
+    link: "https://netwatch.de",
+    image: "/Netwatch_Logo.png",
     theme: "bg-blue-900",
   },
 ];
@@ -98,7 +88,7 @@ const ProjectsSection = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-sm font-semibold text-neutral-900 hover:gap-2 transition-all"
                   >
-                    Projekt ansehen
+                    View Project
                     <svg
                       className="w-4 h-4 ml-1"
                       fill="none"

@@ -9,7 +9,9 @@ export const Home = () => {
   // 2. Effect to check localStorage or system preference on load
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
 
     if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
       setTheme("dark");
@@ -38,18 +40,29 @@ export const Home = () => {
       <section className="mt-10 HeroSection">
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-4 justify-center mb-4">
           <div className="w-48 h-48 rounded-full object-cover md:h-auto md:w-auto overflow-hidden">
-            <img src="/me.png" alt="Thats me" width={600} loading="lazy" decoding="async"/>
+            <img
+              src="/me.png"
+              alt="Thats me"
+              width={600}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-left">Felix Karg</h1>
             <p className="mt-2 text-lg text-primary">
               Informatics Student at DHBW Stuttgart
             </p>
-            
+
             {/* Social Links + Theme Switcher Container */}
             <div className="mt-4 flex justify-center md:justify-start items-center gap-4">
               {/* GitHub */}
-              <a href="https://www.github.com/kargfel" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+              <a
+                href="https://www.github.com/kargfel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -69,7 +82,12 @@ export const Home = () => {
               </a>
 
               {/* LinkedIn */}
-              <a href="https://www.linkedin.com/in/felix-karg-48b525290" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+              <a
+                href="https://www.linkedin.com/in/felix-karg-48b525290"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -90,49 +108,50 @@ export const Home = () => {
               </a>
 
               {/* THEME TOGGLE SWITCH */}
-              <button 
-                onClick={toggleTheme} 
+              <button
+                onClick={toggleTheme}
                 className="hover:opacity-70 transition-opacity focus:outline-none cursor-pointer"
                 aria-label="Toggle Dark Mode"
               >
-                {theme === 'dark' ? (
-                   /* If Dark, show the Lamp (to switch to Light) */
-                   <svg 
-                     width="24" 
-                     height="24" 
-                     viewBox="0 0 24 24" 
-                     fill="none" 
-                     xmlns="http://www.w3.org/2000/svg"
-                     className="w-6 h-6"
-                   >
-                    <path d="M10 22H14M5 9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9C19 11.3787 17.8135 13.4694 16 14.7344L15.4582 17.3004C15.3097 18.2778 14.4695 19 13.4809 19H10.5191C9.53052 19 8.69027 18.2778 8.54177 17.3004L8 14.7453C6.18652 13.4804 5 11.3787 5 9Z" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
+                {theme === "dark" ? (
+                  /* If Dark, show the Lamp (to switch to Light) */
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      d="M10 22H14M5 9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9C19 11.3787 17.8135 13.4694 16 14.7344L15.4582 17.3004C15.3097 18.2778 14.4695 19 13.4809 19H10.5191C9.53052 19 8.69027 18.2778 8.54177 17.3004L8 14.7453C6.18652 13.4804 5 11.3787 5 9Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                     />
-                    <path d="M8 15H16" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
+                    <path
+                      d="M8 15H16"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                     />
-                   </svg>
+                  </svg>
                 ) : (
-                   /* If Light, show the Moon/Face (to switch to Dark) */
-                   <svg 
-                     fill="currentColor" 
-                     width="24" 
-                     height="24" 
-                     viewBox="0 0 52 52" 
-                     xmlns="http://www.w3.org/2000/svg"
-                     className="w-6 h-6"
-                    >
-                      <path d="M24.12,2.69A16.11,16.11,0,0,0,9.69,17a15.9,15.9,0,0,0,5.85,13.65,4.92,4.92,0,0,1,1.87,3.82v.08a4,4,0,0,0,4.05,4h9a4,4,0,0,0,4.05-4v-.08a4.92,4.92,0,0,1,1.87-3.82,15.88,15.88,0,0,0,5.93-12.24C42.36,9.09,34,1.68,24.12,2.69ZM33,43.16H19a1.56,1.56,0,0,0-1.56,1.56,4.69,4.69,0,0,0,4.68,4.68h7.8a4.69,4.69,0,0,0,4.68-4.68A1.56,1.56,0,0,0,33,43.16Z"/>
-                   </svg>
+                  /* If Light, show the Moon/Face (to switch to Dark) */
+                  <svg
+                    fill="currentColor"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 52 52"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                  >
+                    <path d="M24.12,2.69A16.11,16.11,0,0,0,9.69,17a15.9,15.9,0,0,0,5.85,13.65,4.92,4.92,0,0,1,1.87,3.82v.08a4,4,0,0,0,4.05,4h9a4,4,0,0,0,4.05-4v-.08a4.92,4.92,0,0,1,1.87-3.82,15.88,15.88,0,0,0,5.93-12.24C42.36,9.09,34,1.68,24.12,2.69ZM33,43.16H19a1.56,1.56,0,0,0-1.56,1.56,4.69,4.69,0,0,0,4.68,4.68h7.8a4.69,4.69,0,0,0,4.68-4.68A1.56,1.56,0,0,0,33,43.16Z" />
+                  </svg>
                 )}
               </button>
-
             </div>
           </div>
         </div>
@@ -142,7 +161,9 @@ export const Home = () => {
         <div>
           <h2 className=" text-2xl mb-4">About Me</h2>
           <p>
-            Hello! I&apos;m Felix Karg, an informatics student at DHBW Stuttgart. I&apos;m interested in various fields of computer science, especially cybersecurity.
+            Hello! I&apos;m Felix Karg, an informatics student at DHBW
+            Stuttgart. I&apos;m interested in various fields of computer
+            science, especially cybersecurity.
           </p>
         </div>
       </section>
@@ -156,14 +177,24 @@ export const Home = () => {
         <div>
           <h2 className="text-2xl mb-4">Contact</h2>
           <p>
-            Feel free to reach out to me via <a href="mailto:felix.karg@gmx.net" className="underline">email</a> or connect with me on <a href="https://www.linkedin.com/in/felix-karg-48b525290" target="_blank" rel="noopener noreferrer" className="underline">LinkedIn</a>.
+            Feel free to reach out to me via{" "}
+            <a href="mailto:mail@felixkarg.de" className="underline">
+              email
+            </a>{" "}
+            or connect with me on{" "}
+            <a
+              href="https://www.linkedin.com/in/felix-karg-48b525290"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              LinkedIn
+            </a>
+            .
           </p>
         </div>
       </section>
       <Footer />
     </div>
-
-
-    
   );
 };
