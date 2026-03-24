@@ -28,7 +28,7 @@ const projects = [
     title: "NetWatch",
     description:
       "Contributing to NetWatch, a security project for making the internet a safer place.",
-    tags: ["Python", "Security", "Open Source"],
+    tags: ["Python", "Security", "MISP"],
     link: "https://netwatch.de",
     image: "/Netwatch_Logo.png",
     theme: "bg-blue-900",
