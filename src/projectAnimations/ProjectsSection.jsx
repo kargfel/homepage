@@ -5,6 +5,26 @@ import PasserbyCountPreview from "./PasserbyCountPreview.jsx";
 const projects = [
   {
     id: 1,
+    title: "NetWatch",
+    description:
+      "Contributing to NetWatch, a security project for making the internet a safer place.",
+    tags: ["Python", "Security", "MISP"],
+    link: "https://netwatch.de",
+    image: "/Netwatch_Logo.png",
+    theme: "bg-blue-900",
+  },
+  {
+    id: 2,
+    title: "SpondBot",
+    description:
+      "A WebApp that automatically RSVPs to Spond Events for you. On Time. Every Time.",
+    tags: ["Python", "Reverse Engineering", "PostgreSQL", "Docker"],
+    link: "https://github.com/kargfel/spond-bot",
+    image: "/spondbotlogo.png",
+    theme: "bg-blue-600",
+  },
+  {
+    id: 3,
     title: "Shitbingo",
     description:
       "A humorous, accessible web app for meetings where too much is said – and too little gets done.",
@@ -15,23 +35,13 @@ const projects = [
     theme: "bg-white",
   },
   {
-    id: 2,
+    id: 4,
     title: "Passersby Würzburg",
     description: "Exploratory Data Analysis: Pedestrian Footfall in Würzburg.",
     tags: ["R", "LaTeX"],
     link: "https://github.com/kargfel/datascience-passeraby",
     component: <PasserbyCountPreview />,
     theme: "bg-neutral-900",
-  },
-  {
-    id: 3,
-    title: "NetWatch",
-    description:
-      "Contributing to NetWatch, a security project for making the internet a safer place.",
-    tags: ["Python", "Security", "MISP"],
-    link: "https://netwatch.de",
-    image: "/Netwatch_Logo.png",
-    theme: "bg-blue-900",
   },
 ];
 
