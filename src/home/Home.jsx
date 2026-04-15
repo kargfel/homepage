@@ -44,6 +44,7 @@ export const Home = () => {
               src="/me.webp"
               alt="Thats me"
               width={600}
+              height={344}
               loading="lazy"
               decoding="async"
             />
