@@ -10,7 +10,7 @@ const projects = [
       "Contributing to NetWatch, a security project for making the internet a safer place.",
     tags: ["Python", "Security", "MISP"],
     link: "https://netwatch.de",
-    image: "/Netwatch_Logo.png",
+    image: "/Netwatch_Logo.webp",
     theme: "bg-blue-900",
   },
   {
@@ -20,7 +20,7 @@ const projects = [
       "A WebApp that automatically RSVPs to Spond Events for you. On Time. Every Time.",
     tags: ["Python", "Reverse Engineering", "PostgreSQL", "Docker"],
     link: "https://github.com/kargfel/spond-bot",
-    image: "/spondbotlogo.png",
+    image: "/spondbotlogo.webp",
     theme: "bg-blue-600",
   },
   {
@@ -65,6 +65,9 @@ const ProjectsSection = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    width={400}
+                    height={300}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 )}
@@ -97,6 +100,7 @@ const ProjectsSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-sm font-semibold text-neutral-900 hover:gap-2 transition-all"
+                    aria-label={`View ${project.title} project`}
                   >
                     View Project
                     <svg

@@ -36,12 +36,12 @@ export const Home = () => {
   };
 
   return (
-    <div className="w-full px-4 md:w-[1000px] m-auto jetbrains-mono-300">
+    <main className="w-full px-4 md:w-[1000px] m-auto jetbrains-mono-300">
       <section className="mt-10 HeroSection">
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-4 justify-center mb-4">
           <div className="w-48 h-48 rounded-full object-cover md:h-auto md:w-auto overflow-hidden">
             <img
-              src="/me.png"
+              src="/me.webp"
               alt="Thats me"
               width={600}
               loading="lazy"
@@ -62,6 +62,7 @@ export const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity"
+                aria-label="GitHub Profile"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,6 +88,7 @@ export const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity"
+                aria-label="LinkedIn Profile"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -195,6 +197,6 @@ export const Home = () => {
         </div>
       </section>
       <Footer />
-    </div>
+    </main>
   );
 };
