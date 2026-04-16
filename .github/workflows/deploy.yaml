@@ -14,6 +14,9 @@ jobs:
       - name: Build and Deploy using Docker Compose
         # This will build the Dockerfile and start the container on your server
         run: |
-          docker compose up -d --build
-          # Optionally prune old unused images to save disk space on your homeserver
+          rsync -avz --delete --exclude='.env' ./ /home/felix/stacks/homepage/
+         
+          # Run compose for the specific service
+          cd /home/felix/stacks
+          docker compose up -d --build homepage
           docker image prune -f
